@@ -16,3 +16,5 @@ Comme ceci par exemple :
 ```
 81 BACKUP_PATH = "~/sftp_mount"
 ```
+
+Il faudra aussi modifier les chemins dans le script
