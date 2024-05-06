@@ -11,4 +11,4 @@ Stratégie de sauvegarde :
 - Une sauvegarde est conservé pour chaque semaine (exemple tout les vendredi)
 - Une sauvegarde est conservé sur le mois (exemple tout les derniers vendredi du mois)
 
-![alt text](https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/logo%20backcup's.png | width=50)
+![alt text](https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/logo%20backcup's.png width="50")
