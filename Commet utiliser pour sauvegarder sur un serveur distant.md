@@ -13,9 +13,9 @@ sshfs user@example.com:/remotedirectory /sftp_mount
 
 Comme ceci par exemple :
 ```
-cp -R /home/yunohost.backup/archives/. /sftp/archives
+cp -R /home/yunohost.backup/archives/. /sftp_mount/archives
 rm -Rf /home/yunohost.backup/archives
-ln -s /sftp/archives /home/yunohost.backup/archives
+ln -s /sftp_mount/archives /home/yunohost.backup/archives
 ```
 
 ```
