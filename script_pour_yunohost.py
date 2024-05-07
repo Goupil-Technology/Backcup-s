@@ -82,6 +82,9 @@ def gestion_backup_mois():
             jour = liste_jours_semaine[4] # pour conserver le dernier vendredi de chaque mois
             conserver_sauvegarde_du_mois(jour)
             compteur = 0
+            with open("/Backcup-s/compte_mois.log", 'w') as compte_mois:
+                compteur = str(compteur)
+                compte_mois.write(compteur)
         else:
             with open("/Backcup-s/compte_mois.log", 'w') as compte_mois:
                 compteur = str(compteur)
