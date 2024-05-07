@@ -7,10 +7,20 @@ liste_jours_semaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samed
 def conserver_sauvegarde_de_la_semaine(jour):
     conservation_dir = "/sftp_mount/archives/conservation_semaine/"
     os.makedirs(conservation_dir, exist_ok=True)
-    for filename in os.listdir('/sftp_mount/archives/'):
+
+    source_dir = "/sftp_mount/archives/"
+    for filename in os.listdir(source_dir):
         if jour in filename:
-            filename = '/sftp_mount/archives/'+filename
-            shutil.copy(filename, os.path.join(conservation_dir, filename))
+            source_file = os.path.join(source_dir, filename)
+            destination_file = os.path.join(conservation_dir, filename)
+            
+            try:
+                shutil.copy(source_file, destination_file)
+                print(f"Successfully copied {filename} to {destination_file}")
+            except FileNotFoundError:
+                print(f"Error: {source_file} not found.")
+            except Exception as e:
+                print(f"An error occurred while copying {filename}: {e}")
 
 def conserver_sauvegarde_du_mois(jour):
     conservation_dir = "/sftp_mount/archives/conservation_30_jour/"
