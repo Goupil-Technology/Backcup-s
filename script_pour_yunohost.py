@@ -79,7 +79,7 @@ def gestion_backup_mois():
         contenu = compte_mois.readlines()
         compteur = int(contenu[0]) + 1
         if compteur >= 30:
-            jour = liste_jours_semaine[4] # pour conserver le dernier vendredi de chaque mois
+            jour = liste_jours_semaine[0] # pour conserver le dernier lundi de chaque mois
             conserver_sauvegarde_du_mois(jour)
             compteur = 0
             with open("/Backcup-s/compte_mois.log", 'w') as compte_mois:
@@ -99,3 +99,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+conserver_sauvegarde_du_mois(2)
