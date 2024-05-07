@@ -34,11 +34,11 @@ def conserver_sauvegarde_du_mois(jour):
             
             try:
                 shutil.copy(source_file, destination_file)
-                print(f"Copie réussie de {filename} vers {destination_file}")
+                print(f"Successfully copied {filename} to {destination_file}")
             except FileNotFoundError:
-                print(f"Erreur : {source_file} introuvable.")
+                print(f"Error: {source_file} not found.")
             except Exception as e:
-                print(f"Une erreur s'est produite lors de la copie de {filename} : {e}")
+                print(f"An error occurred while copying {filename}: {e}")
 
 
 def recuperer_le_dernier_jour_ayant_etait_sauvegarder():
