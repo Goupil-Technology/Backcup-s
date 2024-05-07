@@ -20,7 +20,7 @@ def conserver_sauvegarde_du_mois(jour):
 
 
 def recuperer_le_dernier_jour_ayant_etait_sauvegarder():
-     with open("last_day.log", 'r') as last_day:
+     with open("/Backcup-s/last_day.log", 'r') as last_day:
         contenu = last_day.readlines()
         numero_de_jour = int(contenu[0]) + 1
         if numero_de_jour >= len(liste_jours_semaine):
@@ -49,11 +49,11 @@ def supprimer_old_backup(jour):
 
 def sauvegarde_log_numero_du_jour(num_de_jour):
     num_de_jour = str(num_de_jour)
-    with open("last_day.log", 'w') as last_day:
+    with open("/Backcup-s/last_day.log", 'w') as last_day:
         last_day.write(num_de_jour)
 
 def gestion_backup_mois():
-    with open("compte_mois.log", 'r') as compte_mois:
+    with open("/Backcup-s/compte_mois.log", 'r') as compte_mois:
         contenu = compte_mois.readlines()
         compteur = int(contenu[0]) + 1
         if compteur >= 30:
@@ -61,7 +61,7 @@ def gestion_backup_mois():
             conserver_sauvegarde_du_mois(jour)
             compteur = 0
         else:
-            with open("compte_mois.log", 'w') as compte_mois:
+            with open("/Backcup-s/compte_mois.log", 'w') as compte_mois:
                 compteur = str(compteur)
                 compte_mois.write(compteur)
 def main():
