@@ -25,10 +25,20 @@ def conserver_sauvegarde_de_la_semaine(jour):
 def conserver_sauvegarde_du_mois(jour):
     conservation_dir = "/sftp_mount/archives/conservation_30_jour/"
     os.makedirs(conservation_dir, exist_ok=True)
-    for filename in os.listdir('/sftp_mount/archives/'):
+
+    source_dir = "/sftp_mount/archives/"
+    for filename in os.listdir(source_dir):
         if jour in filename:
-            filename = '/sftp_mount/archives/'+filename
-            shutil.copy(filename, os.path.join(conservation_dir, filename))
+            source_file = os.path.join(source_dir, filename)
+            destination_file = os.path.join(conservation_dir, filename)
+            
+            try:
+                shutil.copy(source_file, destination_file)
+                print(f"Copie réussie de {filename} vers {destination_file}")
+            except FileNotFoundError:
+                print(f"Erreur : {source_file} introuvable.")
+            except Exception as e:
+                print(f"Une erreur s'est produite lors de la copie de {filename} : {e}")
 
 
 def recuperer_le_dernier_jour_ayant_etait_sauvegarder():
