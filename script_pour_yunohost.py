@@ -40,7 +40,6 @@ def conserver_sauvegarde_du_mois(jour):
             except Exception as e:
                 print(f"An error occurred while copying {filename}: {e}")
 
-
 def recuperer_le_dernier_jour_ayant_etait_sauvegarder():
      with open("/Backcup-s/last_day.log", 'r') as last_day:
         contenu = last_day.readlines()
