@@ -6,6 +6,9 @@ Sur le serveur :
 sudo apt-get install sshfs
 mdkir /sftp_mount
 sshfs user@example.com:/remotedirectory /sftp_mount
+mkdir /sftp_mount/archives
+mkdir /sftp_mount/archives/conservation_semaine
+mkdri /sftp_mount/archives/conservation_30_jour
 ```
 **Pour permettre le bon fonctionnement du script il est nécessaire de donner des droits haut (type +777) au fichier mapper sur le NAS (ici /remotedirectory)**
 
