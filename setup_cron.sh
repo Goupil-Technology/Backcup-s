@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPT_PATH="chemin/vers/scriptDeSauvegarde.py"
+SCRIPT_PATH="/Backcup-s/script_pour_yunohost.py"
 
 # Vérifier si le script Python est exécutable
 if [ ! -x "$SCRIPT_PATH" ]; then
