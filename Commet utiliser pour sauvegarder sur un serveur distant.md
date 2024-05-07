@@ -3,8 +3,8 @@
 **sshfs** permet de monter un dossier à partir du ssh comme si c'était un disque physique
 ```
 sudo apt-get install sshfs
-mdkir ~/sftp_mount
-sshfs user@example.com:/remote/directory ~/sftp_mount
+mdkir /sftp_mount
+sshfs user@example.com:/remote/directory /sftp_mount
 ```
 
 **Comme la cli de yunohost ne permet pas de choisir le dossier ou backup il faudra modifier le script qui permet de faire la backup : yunohost/src/backup.py**
