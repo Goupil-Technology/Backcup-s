@@ -100,4 +100,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-conserver_sauvegarde_du_mois(2)
+conserver_sauvegarde_du_mois('lundi')
