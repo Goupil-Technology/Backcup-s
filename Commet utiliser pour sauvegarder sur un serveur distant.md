@@ -1,13 +1,15 @@
 ## Commet utiliser pour sauvegarder sur un serveur distant avec une connexion ssh
 
 **sshfs** permet de monter un dossier à partir du ssh comme si c'était un disque physique
+Sur le serveur :
 ```
 sudo apt-get install sshfs
 mdkir /sftp_mount
-sshfs user@example.com:/remote/directory /sftp_mount
+sshfs user@example.com:/remotedirectory /sftp_mount
 ```
+**Pour permettre le bon fonctionnement du script il est nécessaire de donner des droits haut (type +777) au fichier mapper sur le NAS (ici /remotedirectory)**
 
-**Comme la cli de yunohost ne permet pas de choisir le dossier ou backup il faudra créer un lien symbolique entre le pratage et le fichier de archives de yunohosy**
+**Comme la cli de yunohost ne permet pas de choisir le dossier ou backup il faudra créer un lien symbolique entre le partage et le fichier de archives de yunohosy**
 
 Comme ceci par exemple :
 ```
