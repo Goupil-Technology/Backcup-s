@@ -5,16 +5,16 @@ import shutil
 liste_jours_semaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
 
 def conserver_sauvegarde_de_la_semaine(jour):
-    conservation_dir = "/home/yunohost.backup/archives/conservation_semaine"
+    conservation_dir = "/sftp_mount/archives/conservation_semaine/"
     os.makedirs(conservation_dir, exist_ok=True)
-    for filename in os.listdir('.'):
+    for filename in os.listdir('/sftp_mount/archives/'):
         if jour in filename:
             shutil.copy(filename, os.path.join(conservation_dir, filename))
 
 def conserver_sauvegarde_du_mois(jour):
-    conservation_dir = "/home/yunohost.backup/archives/conservation_30_jour"
+    conservation_dir = "/sftp_mount/archives/conservation_30_jour/"
     os.makedirs(conservation_dir, exist_ok=True)
-    for filename in os.listdir('.'):
+    for filename in os.listdir('/sftp_mount/archives/'):
         if jour in filename:
             shutil.copy(filename, os.path.join(conservation_dir, filename))
 
