@@ -9,6 +9,7 @@ def conserver_sauvegarde_de_la_semaine(jour):
     os.makedirs(conservation_dir, exist_ok=True)
     for filename in os.listdir('/sftp_mount/archives/'):
         if jour in filename:
+            filename = '/sftp_mount/archives/'+filename
             shutil.copy(filename, os.path.join(conservation_dir, filename))
 
 def conserver_sauvegarde_du_mois(jour):
@@ -16,6 +17,7 @@ def conserver_sauvegarde_du_mois(jour):
     os.makedirs(conservation_dir, exist_ok=True)
     for filename in os.listdir('/sftp_mount/archives/'):
         if jour in filename:
+            filename = '/sftp_mount/archives/'+filename
             shutil.copy(filename, os.path.join(conservation_dir, filename))
 
 
