@@ -5,7 +5,7 @@ Sur le serveur :
 ```
 sudo apt-get install sshfs
 mkdir /sftp_mount
-sshfs user@example.com:/remotedirectory /sftp_mount
+sshfs user@example.com:/remotedirectory /sftp_mount -p <port> (default 22)
 mkdir /sftp_mount/archives
 mkdir /sftp_mount/archives/conservation_semaine
 mkdir /sftp_mount/archives/conservation_30_jour
