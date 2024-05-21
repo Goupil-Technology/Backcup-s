@@ -1,7 +1,8 @@
 ## Comment utiliser pour sauvegarder sur un serveur distant avec une connexion ssh
 
-**sshfs** permet de monter un dossier à partir du ssh comme si c'était un disque physique
-Sur le serveur :
+*sshfs permet de monter un dossier à partir du ssh comme si c'était un disque physique.*
+
+**Etape 1 :** Installation de sshfs sur le serveur :
 ```
 sudo apt-get install sshfs
 mkdir /sftp_mount
@@ -10,17 +11,14 @@ mkdir /sftp_mount/archives
 mkdir /sftp_mount/archives/conservation_semaine
 mkdir /sftp_mount/archives/conservation_30_jour
 ```
-**Pour permettre le bon fonctionnement du script il est nécessaire de donner des droits hauts (type +777) au fichier mapper sur le NAS (ici /remotedirectory)**
+*Pour permettre le bon fonctionnement du script il est nécessaire de donner des droits hauts (type +777) au fichier mapper sur le NAS (ici /remotedirectory).*
 
-**Comme la cli de yunohost ne permet pas de choisir le dossier ou backup il faudra créer un lien symbolique entre le partage et le fichier de archives de yunohosy**
-
-Comme ceci par exemple :
+**Etape 2 :** Créer un lien symbolique entre le partage et le fichier de archives de yunohosy ceci par exemple :
 ```
-cp -R /home/yunohost.backup/archives/. /sftp_mount/archives
-rm -Rf /home/yunohost.backup/archives
 ln -s /sftp_mount/archives /home/yunohost.backup/archives
 ```
 
+**Etape 3 :** Installation de Backcup's :
 ```
 cd /
 git clone https://github.com/MrCarambole/Backcup-s.git
