@@ -13,7 +13,7 @@ fi
 echo "Vérification des dépendances Python..."
 /usr/bin/python3 -c "import datetime" || apt-get install -y python3
 
-# Tâche cron pour exécuter le script toutes les jour à 21 heure
+# Tâche cron pour exécuter le script toutes les heures
 echo "Configuration de la tâche cron..."
 (crontab -l ; echo "0 * * * * /usr/bin/python3 $SCRIPT_PATH") | crontab -
 
