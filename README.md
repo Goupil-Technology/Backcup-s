@@ -24,9 +24,10 @@ mkdir /sftp_mount/archives
 mkdir /sftp_mount/archives/conservation_semaine
 mkdir /sftp_mount/archives/conservation_30_jour
 ```
-*Pour permettre le bon fonctionnement du script il est nécessaire de donner des droits hauts (type +777) au fichier mapper sur le NAS (ici /remotedirectory).*
 
-**Etape 2 :** Créer un lien symbolique entre le partage et le fichier de archives de yunohost ceci par exemple :
+**Etape 2 :** Créer un lien symbolique entre le partage et le fichier archives de yunohost comme ceci par :
+
+En effet pour éviter de modifier le script de backup de yunohost on va linker le /home/yunohost.backup/archives au /sftp_mount/archives, ainsi les sauvegardes seront redirigées vers le serveur distant.
 
 il faut d'abord supprimer le fichier archives existant !
 ```
