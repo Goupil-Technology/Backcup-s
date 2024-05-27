@@ -109,7 +109,6 @@ def conserver_sauvegarde_du_mois(jour):
 def main():
     num_de_jour = gestion_backup_semaine()
 
-    liste_jours_semaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
     jour = liste_jours_semaine[num_de_jour]
 
     supprimer_old_backup(jour)
@@ -117,6 +116,8 @@ def main():
 
     sauvegarde_log_numero_du_jour(num_de_jour)
     gestion_backup_mois()
+
+liste_jours_semaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
 
 if __name__ == "__main__":
     main()
