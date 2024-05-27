@@ -8,7 +8,7 @@ def gestion_backup_semaine():
     Vérifie si c'est le dernier jour de la semaine,
     Si oui il sauvegarde le vendredi à partir de la fonction conserver_sauvegarde_de_la_semaine.
     """
-     with open("/Backcup-s/last_day.log", 'r') as last_day:
+    with open("/Backcup-s/last_day.log", 'r') as last_day:
         contenu = last_day.readlines()
         numero_de_jour = int(contenu[0]) + 1
         if numero_de_jour >= len(liste_jours_semaine):
