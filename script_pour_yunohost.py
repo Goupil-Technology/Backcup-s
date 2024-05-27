@@ -49,13 +49,13 @@ def supprimer_old_backup(jour):
 
 def sauvegarde_du_jour(jour):
         date = datetime.date.today()
-        nom = jour+"-"+str(date)+".backup"
+        nom = jour+"-"+str(date)+".tar"
 
         # Crée la backup
         os.system("yunohost backup create") 
 
         # Renome pour pouvoir la gérer après                                                     
-        os.system("rm /home/yunohost.backup/archives/*.json")                                    
+        # os.system("rm /home/yunohost.backup/archives/*.json")                                    
         cmd = 'find /home/yunohost.backup/archives/ -type f ! -name "*backup*" -exec mv {{}} /home/yunohost.backup/archives/{} \;'.format(nom)                                                
         os.system(cmd)          
 
