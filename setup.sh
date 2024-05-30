@@ -21,7 +21,7 @@ curl "https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/script_v3.py"
 echo "0">/script_backup/cycle.log
 
 echo "[6/7] Modification de l'application YunoHost"
-curl "https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/backup.py">/usr/lib/python3/dist-packages/yunohost/backup.py
+sed -i 's/yunohost\.backup/backup\.backup/' /usr/lib/python3/dist-packages/yunohost/backup.py
 curl "https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/app.py">/usr/lib/python3/dist-packages/yunohost/app.py
 
 echo "[7/7] Gestion de la crontab"
