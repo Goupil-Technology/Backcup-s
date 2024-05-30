@@ -8,7 +8,7 @@ echo "[2/7] Creation du nouveau dossier de backup"
 mkdir /backup.backup
 
 echo "[3/7] Connexion du nouveau dossier de backup au NAS distant"
-sshfs Administrateur@192.168.1.2:/home/test_backup_augustin /backup.backup
+sshfs Administrateur@176.170.224.110:/GoupilTechnology/backup_script_v2 /backup.backup -p 7568
 
 echo "[4/7] Creation de dossier nécessaire au fonctionnement du script"
 mkdir /backup.backup/archives
