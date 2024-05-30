@@ -577,7 +577,7 @@ def app_upgrade(
     from yunohost.permission import permission_sync_to_user
     from yunohost.regenconf import manually_modified_files
     from yunohost.utils.legacy import _patch_legacy_php_versions, _patch_legacy_helpers
-    from yunohost.backup import (
+    from backup.backup import (
         backup_list,
         backup_create,
         backup_delete,
