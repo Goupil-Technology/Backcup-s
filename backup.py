@@ -78,13 +78,13 @@ from yunohost.utils.system import (
 )
 from yunohost.settings import settings_get
 
-BACKUP_PATH = "/home/yunohost.backup"
+BACKUP_PATH = "/backup.backup"
 ARCHIVES_PATH = f"{BACKUP_PATH}/archives"
 APP_MARGIN_SPACE_SIZE = 100  # In MB
 CONF_MARGIN_SPACE_SIZE = 10  # IN MB
 POSTINSTALL_ESTIMATE_SPACE_SIZE = 5  # In MB
 MB_ALLOWED_TO_ORGANIZE = 10
-logger = getActionLogger("yunohost.backup")
+logger = getActionLogger("backup.backup")
 
 
 class BackupRestoreTargetsManager:
