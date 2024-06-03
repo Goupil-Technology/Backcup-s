@@ -32,4 +32,4 @@ echo "[7/7] Gestion de la crontab"
 (crontab -l ; echo "0 21 * * * /usr/bin/python3 /script_backup/script.py") | crontab -
 service cron restart
 
-echo "Le script de sauvegarde est installé 🐸"
+echo "Le script de sauvegarde est installé"
