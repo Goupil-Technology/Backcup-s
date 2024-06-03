@@ -8,7 +8,11 @@ echo "[2/7] Creation du nouveau dossier de backup"
 mkdir /backup.backup
 
 echo "[3/7] Connexion du nouveau dossier de backup au NAS distant"
-sshfs Administrateur@176.170.224.110:/GoupilTechnology/backup_script_v2 /backup.backup -p 7568
+read -p "Nom d'utilisateur pour ce connecter au NAS: " user_nas
+read -p "Adresse ip du NAS: " ip_nas
+read -p "Port du NAS: " port_nas
+read -p "Dossier de sauvegarde du NAS: " dir_nas
+sshfs $user_nas@$ip_nas:$dir_nas /backup.backup -p $port
 
 echo "[4/7] Creation de dossier nécessaire au fonctionnement du script"
 mkdir /backup.backup/archives
@@ -17,7 +21,7 @@ mkdir /backup.backup/archives/sauvegarde_mois
 
 echo "[5/7] Telechargement du script"
 mkdir /script_backup
-curl "https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/script_v3.py">/script_backup/script.py
+curl "https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/script.py">/script_backup/script.py
 echo "0">/script_backup/cycle.log
 
 echo "[6/7] Modification de l'application YunoHost"
