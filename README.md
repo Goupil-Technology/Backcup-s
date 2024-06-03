@@ -23,6 +23,11 @@ cd / && curl https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/uninst
 
 ## Comment ça marche ?
 Un lien SSHFS est créé entre votre serveur YunoHost et le NAS sur le dossier '/backup.backup'. 
+
 Afin que YunoHost sauvegarde à cet emplacement, les constantes du script backup.py sont modifiées ainsi que le script app.py pour que les sauvegardes soient affichées dans le panel admin.
+
 Une nouvelle entrée est créée dans la crontab pour que le script se lance tous les jours à 21 heures.
+
 Chaque semaine, une sauvegarde supplémentaire est réalisée dans '/backup.backup/archives/sauvegarde_semaine' et tous les mois dans '/backup.backup/archives/sauvegarde_mois' (ces sauvegardes ne sont pas affichées dans le panel admin).
+
+Il peut être nécessaire de redémarrer le serveur pour que les changements soient pris en compte.
