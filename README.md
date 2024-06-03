@@ -14,3 +14,11 @@ Stratégie de sauvegarde :
 ```
 cd / && curl https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/setup.sh>setup.sh && chmod +x setup.sh && ./setup.sh
 ```
+
+## Desinstallation
+```
+cd / && curl https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/uninstall.sh>uninstall.sh && chmod +x uninstall.sh && ./uninstall.sh
+```
+*A lancer en root*
+
+## Comment ça marche ?
