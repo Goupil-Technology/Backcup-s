@@ -1,4 +1,4 @@
-fusermount -u /backup.backup/
+fusermount -u /backup.backup/archives
 rm -R /backup.backup/
 rm -R /script_backup/
 rm /setup.sh
