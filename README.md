@@ -30,4 +30,4 @@ Une nouvelle entrée est créée dans la crontab pour que le script se lance tou
 
 Chaque semaine, une sauvegarde supplémentaire est réalisée dans '/backup.backup/archives/sauvegarde_semaine' et tous les mois dans '/backup.backup/archives/sauvegarde_mois' (ces sauvegardes ne sont pas affichées dans le panel admin).
 
-Il peut être nécessaire de redémarrer le serveur pour que les changements soient pris en compte.
+Pour que les sauvegardes soient affichées dans le panel admin, il est nécessaire de faire une sauvegarde manuelle (via le panel admin ou en CLI).
