@@ -8,7 +8,7 @@ L'objectif du script est d'automatiser la création de backup d'un serveur YunoH
 - Une copie supplémentaire de la sauvegarde courante est réalisée par défaut à certaines intervalles, on peut le personnaliser via la constante INTERVAL_BACKUP. Elles sont sauvegardées dans sauvegarde_semaine.
 - Le dernier jour des intervalles (ici 30), une sauvegarde supplémentaire est également réalisée dans sauvegarde_mois.
 
-<img src="https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/logo.png" width="250">
+<img src="https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/logobackcups.png" width="250">
 
 ## 📥 Installation
 ```
