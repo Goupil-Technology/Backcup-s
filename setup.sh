@@ -6,13 +6,15 @@ sudo apt-get install sshfs
 
 echo "[2/7] Creation du nouveau dossier de backup"
 mkdir /backup.backup
+mkdir /backup.backup/archives
+mkdir /backup.backup/tmp
 
 echo "[3/7] Connexion du nouveau dossier de backup au NAS distant"
 read -p "Nom d'utilisateur pour ce connecter au NAS: " user_nas
 read -p "Adresse ip du NAS: " ip_nas
 read -p "Port du NAS: " port_nas
 read -p "Dossier de sauvegarde du NAS: " dir_nas
-sshfs $user_nas@$ip_nas:$dir_nas /backup.backup -p $port_nas
+sshfs $user_nas@$ip_nas:$dir_nas /backup.backup/archives -p $port_nas
 
 echo "[4/7] Creation de dossier nécessaire au fonctionnement du script"
 mkdir /backup.backup/archives
