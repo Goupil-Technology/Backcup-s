@@ -15,6 +15,8 @@ L'objectif du script est d'automatiser la création de backup d'un serveur YunoH
 cd / && curl https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/setup.sh>setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
+🚨 Pour que les sauvegardes soient affichées dans le panel admin, il est nécessaire de faire une sauvegarde manuelle (via le panel admin ou en CLI).
+
 ## 🗑️ Desinstallation
 ```
 cd / && curl https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/uninstall.sh>uninstall.sh && chmod +x uninstall.sh && ./uninstall.sh
@@ -29,5 +31,3 @@ Afin que YunoHost sauvegarde à cet emplacement, les constantes du script backup
 Une nouvelle entrée est créée dans la crontab pour que le script se lance tous les jours à 21 heures.
 
 Chaque semaine, une sauvegarde supplémentaire est réalisée dans '/backup.backup/archives/sauvegarde_semaine' et tous les mois dans '/backup.backup/archives/sauvegarde_mois' (ces sauvegardes ne sont pas affichées dans le panel admin).
-
-Pour que les sauvegardes soient affichées dans le panel admin, il est nécessaire de faire une sauvegarde manuelle (via le panel admin ou en CLI).
