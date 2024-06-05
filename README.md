@@ -3,7 +3,7 @@
 
 L'objectif du script est d'automatiser la création de backup d'un serveur YunoHost vers un serveur NAS distant type Synology.
 
-## Stratégie de sauvegarde : 
+## 🗃️ Stratégie de sauvegarde 
 - Les sauvegardes sont conservées sur la semaine (tous les lundis on supprime la sauvegarde du lundi dernier).
 - Une copie supplémentaire de la sauvegarde courante est réalisée par défaut à certaines intervalles, on peut le personnaliser via la constante INTERVAL_BACKUP. Elles sont sauvegardées dans sauvegarde_semaine.
 - Le dernier jour des intervalles (ici 30), une sauvegarde supplémentaire est également réalisée dans sauvegarde_mois.
