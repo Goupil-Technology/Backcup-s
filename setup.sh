@@ -23,7 +23,7 @@ mkdir /backup.backup/archives/sauvegarde_mois
 
 echo "[5/7] Telechargement du script"
 mkdir /script_backup
-curl "https://raw.githubusercontent.com/GoupilTechnology/Backcup-s/main/script.py">/script_backup/script.py
+curl "https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/script.py">/script_backup/script.py
 echo "0">/script_backup/cycle.log
 
 echo "[6/7] Modification de l'application YunoHost"
