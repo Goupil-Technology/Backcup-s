@@ -12,14 +12,14 @@ L'objectif du script est d'automatiser la création de backup d'un serveur YunoH
 
 ## 📥 Installation
 ```
-cd / && curl https://raw.githubusercontent.com/GoupilTechnology/Backcup-s/main/setup.sh>setup.sh && chmod +x setup.sh && ./setup.sh
+cd / && curl https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/setup.sh>setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
 🚨 Pour que les sauvegardes soient affichées dans le panel admin, il est nécessaire de faire une sauvegarde manuelle (via le panel admin ou en CLI).
 
 ## 🗑️ Desinstallation
 ```
-cd / && https://raw.githubusercontent.com/GoupilTechnology/Backcup-s/main/uninstall.sh>uninstall.sh && chmod +x uninstall.sh && ./uninstall.sh
+cd / && https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/uninstall.sh>uninstall.sh && chmod +x uninstall.sh && ./uninstall.sh
 ```
 *A lancer en root*
 
