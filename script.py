@@ -44,6 +44,7 @@ def cycle_suppr_backup():
     """ Cette fonction est chargée de supprimer les backups les plus anciennes au fur et à mesure en fonction de NB_BACKUP_CONSERVE définit en constante plus haut.
     Par exemple si 'NB_BACKUP_CONSERVE' vaut 5, les sauvegarde seront conservés sur 5 cycles.
     Il met ensuite le fichier log à jour."""
+    os.system("sed -i '/^$/d' /script_backup/backup.log")
     with open(LOG_PATH, "r") as log:
         lignes = log.readlines()
         if len(lignes) > NB_BACKUP_CONSERVE:
