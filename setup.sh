@@ -29,6 +29,8 @@ echo "0">/script_backup/cycle.log
 echo "[6/7] Modification de l'application YunoHost"
 sed -i 's/\/home\/yunohost\.backup/\/backup\.backup/g' /usr/lib/python3/dist-packages/yunohost/backup.py
 sed -i 's/yunohost\.backup/backup\.backup/' /usr/lib/python3/dist-packages/yunohost/app.py
+read -p "Durée de conservation des sauvegardes: " rotate_cycle                                                                                                                                
+sed -i "s/NB_BACKUP_CONSERVE = .*/NB_BACKUP_CONSERVE = $rotate_cycle/" /script_backup/script.py
 
 echo "[7/7] Gestion de la crontab"
 (crontab -l ; echo "0 21 * * * /usr/bin/python3 /script_backup/script.py") | crontab -
