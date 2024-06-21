@@ -8,7 +8,7 @@ L'objectif du script est d'automatiser la création de backup d'un serveur YunoH
 - Une copie supplémentaire de la sauvegarde courante est réalisée par défaut à certaines intervalles, on peut le personnaliser via la constante INTERVAL_BACKUP. Elles sont sauvegardées dans sauvegarde_semaine.
 - Le dernier jour des intervalles (ici 30), une sauvegarde supplémentaire est également réalisée dans sauvegarde_mois.
 
-<img src="https://raw.githubusercontent.com/MrCarambole/Backcup-s/main/logobackcups.png" width="250">
+<img src="https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/logobackcups.png" width="250">
 
 ## 📥 Installation
 ```
@@ -32,4 +32,4 @@ Afin que YunoHost sauvegarde à cet emplacement, les constantes du script backup
 
 Une nouvelle entrée est créée dans la crontab pour que le script se lance tous les jours à 21 heures.
 
-Chaque semaine, une sauvegarde supplémentaire est réalisée dans '/backup.backup/archives/sauvegarde_semaine' et tous les mois dans '/backup.backup/archives/sauvegarde_mois' (ces sauvegardes ne sont pas affichées dans le panel admin).
+Chaque semaine, une sauvegarde supplémentaire est réalisée dans '/backup.backup/archives/sauvegarde_semaine' et tous les mois dans '/backup.backup/archives/sauvegarde_mois'. Actuellement ces fichiers de sauvegardes présents dans sauvegardes_semaine et sauvegardes_mois ne sont pas affichés dans la webadmin. Pour que ce soit le cas, il faudrait modifier en profondeur le fichier backup.py. Nous avons choisi de ne pas le faire pour éviter des problèmes de compatibilité avec des futures mises à jour Yunohost.
