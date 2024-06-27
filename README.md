@@ -21,7 +21,7 @@ cd / && curl https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/
 
 ## 🗑️ Desinstallation
 ```
-cd / && https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/uninstall.sh>uninstall.sh && chmod +x uninstall.sh && ./uninstall.sh
+cd / && curl https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/uninstall.sh>uninstall.sh && chmod +x uninstall.sh && ./uninstall.sh
 ```
 *A lancer en root*
 
