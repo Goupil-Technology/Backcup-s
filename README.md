@@ -17,7 +17,9 @@ cd / && curl https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/
 
 <img src="https://raw.githubusercontent.com/Goupil-Technology/Backcup-s/main/installation.gif" width="700">
 
-🚨 Pour que les sauvegardes soient affichées dans le panel admin, il est nécessaire de faire une sauvegarde manuelle (via le panel admin ou en CLI).
+### 🚨 Points d'attention
+- Le dossier de sauvegarde donné dans l'étape 3 doit déjà exister : le script ne le créera pas.<br>
+- Pour que les sauvegardes soient affichées dans le panel admin, il est nécessaire de faire une sauvegarde manuelle (via le panel admin ou en CLI).
 
 ## 🗑️ Desinstallation
 ```
