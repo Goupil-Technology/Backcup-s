@@ -35,3 +35,12 @@ Afin que YunoHost sauvegarde à cet emplacement, les constantes du script backup
 Une nouvelle entrée est créée dans la crontab pour que le script se lance tous les jours à 21 heures.
 
 Chaque semaine, une sauvegarde supplémentaire est réalisée dans '/backup.backup/archives/sauvegarde_semaine' et tous les mois dans '/backup.backup/archives/sauvegarde_mois'. Actuellement ces fichiers de sauvegardes présents dans sauvegardes_semaine et sauvegardes_mois ne sont pas affichés dans la webadmin. Pour que ce soit le cas, il faudrait modifier en profondeur le fichier backup.py. Nous avons choisi de ne pas le faire pour éviter des problèmes de compatibilité avec des futures mises à jour Yunohost.
+
+
+## 🛠️ Points à améliorer
+### 💻 Redémarrage serveur
+Lors d'un redémarrage du serveur le lien symbolique entre le dossier backup de Yunohost et celui choisit sur le NAS se casse. Il faut donc le recréer en éxécutant la commande suivante :
+```
+sshfs [compte_admin_nas]@[IP_NAS]:[Dossier_BackUp_NAS] /backup.backup/archives -p [Port_NAS]
+```
+Puis valider le mot de passe du compte_admin_NAS
